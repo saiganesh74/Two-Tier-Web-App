@@ -18,6 +18,7 @@ pipeline {
     }
 }
 
+
         stage('Verify') {
             steps {
                 sh 'docker ps'
