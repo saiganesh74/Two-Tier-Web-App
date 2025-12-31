@@ -9,11 +9,14 @@ pipeline {
         }
 
         stage('Build & Deploy') {
-            steps {
-                sh 'docker compose down || true'
-                sh 'docker compose up -d --build'
-            }
-        }
+    steps {
+        sh '''
+        docker compose down --remove-orphans || true
+        docker rm -f $(docker ps -aq) || true
+        docker compose up -d --build
+        '''
+    }
+}
 
         stage('Verify') {
             steps {
