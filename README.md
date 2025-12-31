@@ -72,3 +72,11 @@ From the project root directory:
 ```bash
 docker compose up -d --build
 ```
+
+## 🧪 Future Enhancements
+
+- Full CRUD operations (Update/Delete users)
+- Nginx reverse proxy
+- GitHub Webhooks for auto builds
+- Cloud deployment (AWS EC2)
+- Kubernetes migration
