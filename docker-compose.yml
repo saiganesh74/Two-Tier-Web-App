@@ -1,7 +1,6 @@
 services:
   db:
     image: mysql:8
-    container_name: mysql-db
     environment:
       MYSQL_ROOT_PASSWORD: root
     volumes:
@@ -13,7 +12,6 @@ services:
 
   web:
     build: ./app
-    container_name: two-tier-flask-app
     ports:
       - "5000:5000"
     environment:
